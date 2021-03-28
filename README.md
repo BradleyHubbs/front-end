@@ -1,6 +1,6 @@
 #  🚧 Build Week: Water My Plants (TT41) -- FRONT-END
 
-## TO-DO:
+## TASKS:
 
 ⛔ Build a `user` component - can signup / create an account by providing a unique `username`, valid `phoneNumber`, and a `password`
 
