@@ -25,7 +25,7 @@ function App() {
 
 
   // POST USERS
-  const postNewUser = {
+  const postNewUser = () => {
     // axios
     // .post() // TO ROUTE
     // .then((res) => {
@@ -36,13 +36,14 @@ function App() {
     //     console.log(err);
     //   }
     // )
+    console.log('postNewUser has fired!')
   };
 
 
   return (
     <div className="App">
       <header className="App-header">
-        <LoginPage />
+        <LoginPage postNewUser={ postNewUser } />
       </header>
     </div>
   );
