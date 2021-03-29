@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function LoginPage(props) {
+
+    // INITIAL FORM VALUES - Do I need to add all properties or just ones needed for login-page?
+    const initialLoginValues = {
+        username: "",
+        password: ""
+    };
+
+    // ADD STATE HERE
+    const [loginValues, setLoginValues] = useState(initialLoginValues);
+
     return(
         <div className='login-form'>
             <h1>water my plants</h1>

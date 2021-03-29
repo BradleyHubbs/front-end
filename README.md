@@ -2,7 +2,7 @@
 
 ## TASKS:
 
-⛔ Build a `user` component - can signup / create an account by providing a unique `username`, valid `phoneNumber`, and a `password`
+⛔ `user` - can signup / create an account by providing a unique `username`, valid `phoneNumber`, and a `password`
 
 ⛔ Build a `login-page` component
 
