@@ -9,6 +9,6 @@ export default yup.object().shape({
         .string()
         .required('password is required')
         .min(5, 'password must be longer than 5 characters'),
-    phoneNumber: yup
-        .string()
+    // phoneNumber: yup
+    //     .string()
 });

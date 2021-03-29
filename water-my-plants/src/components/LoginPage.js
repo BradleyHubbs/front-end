@@ -1,15 +1,32 @@
 import React, { useState } from 'react';
+// import axios from 'axios';
+import styled from 'styled-components';
+
+const StyledForm = styled
+
+
 
 export default function LoginPage(props) {
 
     // INITIAL FORM VALUES - Do I need to add all properties or just ones needed for login-page?
-    const initialLoginValues = {
+    const initialFormValues = {
         username: "",
-        password: ""
+        password: "",
+        phoneNumber: ""
+    };
+
+    const initialFormErrors = {
+        username: "",
+        password: "",
+        phoneNumber: ""
     };
 
     // ADD STATE HERE
-    const [loginValues, setLoginValues] = useState(initialLoginValues);
+    const [formValues, setFormValues] = useState(initialFormValues);
+    const [formErrors, setFormErrors] = useState(initialFormErrors);
+
+
+
 
     return(
         <div className='login-form'>
@@ -30,6 +47,15 @@ export default function LoginPage(props) {
                 <input
                     name='password'
                     type='password'
+                />
+                <br/>
+                <br/>
+                <label htmlFor='password'>
+                    Phone Number:
+                </label>
+                <input
+                    name='phoneNumber'
+                    type='text'
                 />
                 <br/>
                 <br/>
