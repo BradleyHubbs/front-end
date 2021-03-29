@@ -1,8 +1,26 @@
 import React, { useState } from 'react';
 // import axios from 'axios';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
-const StyledForm = styled
+// const StyledButton = styled.button`
+//     padding: 6px 10px;
+//     margin: 5px;
+//     border: none;
+//     border-radius: 3px;
+//     color: white;
+// `
+
+// const SubmitButton = styled.button`
+//     padding: 6px 10px;
+//     margin: 5px;
+//     border: none;
+//     border-radius: 3px;
+//     color: white;
+// `;
+
+// const StyledForm = styled.div`
+//     border: 1px solid red;
+// `;
 
 
 
@@ -25,42 +43,58 @@ export default function LoginPage(props) {
     const [formValues, setFormValues] = useState(initialFormValues);
     const [formErrors, setFormErrors] = useState(initialFormErrors);
 
+    const onSubmit = (e) => {
+        e.preventDefault();
+        console.log('This is event: ', e.target);
+    };
 
-
+    const onChange = (e) => {
+        const { name, value} = e.target;
+        console.log(name, value);
+    };
 
     return(
-        <div className='login-form'>
+        <div className='login-container'>
             <h1>water my plants</h1>
-            <form>
-                <label htmlFor='username'>
-                    Username:
-                </label>
-                <input
-                    name='username'
-                    type='text'
-                />
-                <br/>
-                <br/>
-                <label htmlFor='password'>
-                    Password:
-                </label>
-                <input
-                    name='password'
-                    type='password'
-                />
-                <br/>
-                <br/>
-                <label htmlFor='password'>
-                    Phone Number:
-                </label>
-                <input
-                    name='phoneNumber'
-                    type='text'
-                />
-                <br/>
-                <br/>
-                <button id='submitBtn'>Sign In</button>
-            </form>
+            {/* <StyledForm> */}
+
+                <form className="form-container" onSubmit={ onSubmit }>
+                    <label htmlFor='username'>
+                        Username:
+                    </label>
+                    <input
+                        name='username'
+                        type='text'
+                        onChange={onChange}
+                    />
+                    <br/>
+                    <br/>
+                    <label htmlFor='password'>
+                        Password:
+                    </label>
+                    <input
+                        name='password'
+                        type='password'
+                        onChange={onChange}
+                    />
+                    <br/>
+                    <br/>
+                    <label htmlFor='password'>
+                        Phone Number:
+                    </label>
+                    <input
+                        name='phoneNumber'
+                        type='text'
+                        onChange={onChange}
+                    />
+                    <br/>
+                    <br/>
+                    
+
+                    <button id='submitBtn'>Sign In</button>
+
+                </form>
+            {/* </StyledForm> */}
         </div>
     )
 };
